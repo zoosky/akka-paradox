@@ -1,0 +1,1 @@
+# Paradox for Akka documentation
