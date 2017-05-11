@@ -374,6 +374,33 @@ dl.tabbed dd.current {
   background: #f3f7f8;
 }
 
+/* tables */
+
+table thead tr {
+  background: #fff;
+}
+
+table thead tr th {
+  border: 1px solid #e5e6e4;
+}
+
+table tbody tr {
+  background: #fff !important;
+}
+
+table tbody tr td {
+  border: 1px solid #e5e6e4;
+}
+
+table code {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  background: #f3f7f8;
+  padding: 0 0.2em !important;
+}
+
+
 /* sticky header with overlay menu (for small/medium screens) */
 
 .sticky-header {
