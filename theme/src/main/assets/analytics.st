@@ -1,8 +1,8 @@
 <!--Google Analytics-->
 <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-21117439-1']);
-  _gaq.push(['_setDomainName', 'akka.io']);
+  _gaq.push(['_setAccount', '$page.properties.("google.analytics.account")$']);
+  _gaq.push(['_setDomainName', '$page.properties.("google.analytics.domain.name")$']);
   _gaq.push(['_trackPageview']);
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
