@@ -48,23 +48,13 @@ Version $page.properties.("project.version")$
 <input type="search" class="search" placeholder="Search"/>
 </div>
 </header>
-<nav id="nav-contents" class="site-nav fixed-sidebar-contents" data-toggler=".expanded-footer">
+<nav id="nav-contents" class="site-nav fixed-sidebar-contents">
 <div class="nav-toc">
 $page.navigation$
 </div>
 </nav>
-<footer id="nav-footer" class="nav-footer fixed-sidebar-footer" data-toggler=".expanded-footer">
-<a class="nav-footer-toggle" data-toggle="nav-footer nav-contents">
-<img class="logo" src="$page.base$images/akka-logo-reverse.svg">
-<button class="up-down-button" type="button"><i class="icon-up"></i></button>
-</a>
-<div class="nav-footer-panel">
-<ul class="nav-links">
-<li><a href="http://akka.io">akka.io</a></li>
-<li><a href="$page.base$java.html">Java Documentation</a></li>
-<li><a href="$page.base$scala.html">Scala Documentation</a></li>
-</ul>
-</div>
+<footer id="nav-footer" class="nav-footer fixed-sidebar-footer">
+<a href="http://akka.io"><img class="logo" src="$page.base$images/akka-logo-reverse.svg"></a>
 </footer>
 </aside>
 
