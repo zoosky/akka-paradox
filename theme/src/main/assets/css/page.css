@@ -284,6 +284,56 @@ li code {
   padding: 0 0.2em !important;
 }
 
+/* tabbed code snippets */
+
+dl.tabbed {
+  position: relative;
+}
+
+dl.tabbed dt {
+  float: left;
+  display: inline-block;
+  position: relative;
+  margin-left: 10px;
+  background: #e5e6e4;
+}
+
+dl.tabbed dt.current {
+  z-index: 2;
+}
+
+dl.tabbed dt a {
+  display: block;
+  padding: 0 20px;
+  height: 30px;
+  line-height: 2;
+  color: #0b5567;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+dl.tabbed dt a:hover {
+  background: #fff;
+}
+
+dl.tabbed dt.current a {
+  background: #fff;
+  color: #0b5567;
+  font-weight: bold;
+  outline: none;
+}
+
+dl.tabbed dd {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 29px;
+}
+
+dl.tabbed dd.current {
+  z-index: 1;
+}
+
 /* callouts */
 
 .callout {
