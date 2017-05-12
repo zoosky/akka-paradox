@@ -47,6 +47,9 @@ $page.navigation$
 <div class="nav-header-version row">
 Version $page.properties.("project.version")$
 </div>
+<div class="nav-header-groups">
+$page.groups$
+</div>
 $if(page.properties.("algolia.docsearch.api_key"))$
 <div class="nav-header-search">
 <input id="search" type="search" class="search" placeholder="Search"/>
@@ -100,6 +103,7 @@ $source()$
 
 <script type="text/javascript" src="$page.base$js/scrollsneak.js"></script>
 <script type="text/javascript">jQuery(document).foundation();</script>
+<script type="text/javascript" src="$page.base$js/groups.js"></script>
 <script type="text/javascript" src="$page.base$js/page.js"></script>
 <script type="text/javascript" src="$page.base$js/magellan.js"></script>
 
