@@ -47,9 +47,11 @@ $page.navigation$
 <div class="nav-header-version row">
 Version $page.properties.("project.version")$
 </div>
+$if(page.properties.("algolia.docsearch.api_key"))$
 <div class="nav-header-search">
-<input type="search" class="search" placeholder="Search"/>
+<input id="search" type="search" class="search" placeholder="Search"/>
 </div>
+$endif$
 </header>
 <nav id="nav-contents" class="site-nav fixed-sidebar-contents">
 <div class="nav-toc">
@@ -96,8 +98,6 @@ $source()$
 </section>
 </main>
 
-</body>
-
 <script type="text/javascript" src="$page.base$js/scrollsneak.js"></script>
 <script type="text/javascript">jQuery(document).foundation();</script>
 <script type="text/javascript" src="$page.base$js/page.js"></script>
@@ -108,4 +108,7 @@ $source()$
 <script type="text/javascript" src="$page.base$lib/prettify/lang-scala.js"></script>
 <script type="text/javascript">jQuery(function(){window.prettyPrint && prettyPrint()});</script>
 
+$search()$
+
+</body>
 </html>
