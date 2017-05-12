@@ -1,17 +1,9 @@
 # Paradox for Akka documentation
 
-## Paradox theme for Akka
-
-Adding the theme to a Paradox build:
+Use the sbt plugin for Akka Paradox:
 
 ```scala
-paradoxTheme := Some("com.lightbend.akka" % "paradox-theme-akka" % "<version>")
+addSbtPlugin("com.lightbend.akka" % "sbt-paradox-akka" % "<version>")
 ```
 
-This theme is expected to be used with auto-expanding navigation:
-
-```scala
-paradoxNavigationDepth := 1
-paradoxNavigationExpandDepth := Some(1)
-paradoxNavigationIncludeHeaders := true
-```
+This plugin extends the Paradox sbt plugin with some default settings and sets the Akka Paradox theme.
