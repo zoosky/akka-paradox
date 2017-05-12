@@ -107,7 +107,6 @@ body {
 .page-content {
   min-height: 600px;
   padding-top: 0.9375rem;
-  padding-bottom: 2.5rem;
 }
 
 /* headers */
@@ -632,6 +631,7 @@ table code {
 
 .nav-prev-next {
   margin-top: 3rem;
+  margin-bottom: 3rem;
   background: #fff;
 }
 
@@ -660,7 +660,7 @@ table code {
 /* footer */
 
 .page-footer {
-  margin-top: 3rem;
+  margin-top: 1rem;
   border-top: 2px solid #e7e7e7;
   padding-top: 1rem;
   padding-bottom: 1rem;

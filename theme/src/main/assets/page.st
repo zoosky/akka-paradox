@@ -80,6 +80,8 @@ $endif$
 </div>
 </section>
 
+$source()$
+
 <footer class="page-footer row clearfix">
 <img class="akka-icon float-left show-for-medium" src="$page.base$images/akka-icon.svg">
 <section class="copyright">
