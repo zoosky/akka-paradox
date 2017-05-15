@@ -24,7 +24,7 @@ $analytics()$
 
 <aside id="overlay-menu" class="full reveal" data-reveal data-v-offset="0" data-animation-in="slide-in-down" data-animation-out="scale-out-down">
 <div class="overlay-header clearfix">
-<a href="http://akka.io"><img class="logo" src="$page.base$images/akka-logo-reverse.svg"></a>
+$logo()$
 <button class="menu-close float-right" type="button" data-close><span>&times;</span></button>
 </div>
 <nav class="nav-toc">
@@ -34,7 +34,7 @@ $page.navigation$
 
 <header class="site-header hide-for-large" data-sticky-container>
 <div class="sticky-header clearfix" data-sticky data-sticky-on="small" data-margin-top="0">
-<a href="http://akka.io"><img class="logo" src="$page.base$images/akka-logo-reverse.svg"></a>
+$logo()$
 <button class="menu-icon float-right" type="button" data-open="overlay-menu"></button>
 </div>
 </header>
@@ -62,7 +62,7 @@ $page.navigation$
 </div>
 </nav>
 <footer id="nav-footer" class="nav-footer fixed-sidebar-footer">
-<a href="http://akka.io"><img class="logo" src="$page.base$images/akka-logo-reverse.svg"></a>
+$logo()$
 </footer>
 </aside>
 
