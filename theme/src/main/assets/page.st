@@ -70,11 +70,13 @@ $page.navigation$
 <section class="site-content small-12 column">
 
 <article class="page-content row">
-<div class="small-12 column" id="docs">
+<div class="small-12 large-9 column" id="docs">
 $page.content$
 </div>
 </article>
 
+<div class="row">
+<div class="small-12 large-9 column">
 <section class="nav-prev-next row">
 <div class="nav-prev small-6 column">
 $if(page.prev.href)$
@@ -87,6 +89,8 @@ $if(page.next.href)$
 $endif$
 </div>
 </section>
+</div>
+</div>
 
 $source()$
 

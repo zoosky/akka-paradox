@@ -105,6 +105,7 @@ body {
 }
 
 .page-content {
+  position: relative;
   min-height: 600px;
   padding-top: 0.9375rem;
 }
@@ -376,6 +377,35 @@ dl.tabbed dd.current {
 
 .callout code {
   background: #f3f7f8;
+}
+
+/* sidenotes */
+
+.sidenote {
+  background: #fff;
+  border-left: 10px solid #e5e6e4;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin: 0 0 1.5rem;
+}
+
+.sidenote > :first-child {
+  margin-top: 0
+}
+
+.sidenote > :last-child {
+  margin-bottom: 0
+}
+
+@media screen and (min-width:64em) {
+  .sidenote {
+    position: absolute;
+    right: 0;
+    width: 25%;
+    background: none;
+    border: 0;
+    padding-top: 0;
+  }
 }
 
 /* tables */
