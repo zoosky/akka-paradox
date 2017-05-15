@@ -62,7 +62,8 @@ body {
   top: 0;
   left: 0;
   height: 160px;
-  width: 300px;
+  width: 25%;
+  max-width: 20rem;
   overflow: hidden;
   background: #15a9ce;
   color: #fff;
@@ -73,7 +74,8 @@ body {
   top: 160px;
   left: 0;
   bottom: 3rem;
-  width: 300px;
+  width: 25%;
+  max-width: 20rem;
   overflow-x: hidden;
   overflow-y: auto;
   background: #fff;
@@ -85,7 +87,8 @@ body {
   left: 0;
   bottom: 0;
   height: 3rem;
-  width: 300px;
+  width: 25%;
+  max-width: 20rem;
   overflow: hidden;
   background: #128aaa;
   color: #fff;
@@ -94,7 +97,13 @@ body {
 
 @media screen and (min-width:64em) {
   .fixed-shift-for-large {
-    margin-left: 300px;
+    margin-left: 25%;
+  }
+}
+
+@media screen and (min-width:80em) {
+  .fixed-shift-for-large {
+    margin-left: 20rem;
   }
 }
 
