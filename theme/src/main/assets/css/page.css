@@ -95,6 +95,10 @@ body {
   transition: all 300ms ease-in-out;
 }
 
+.fixed-shift-for-large {
+  overflow-x: hidden;
+}
+
 @media screen and (min-width:64em) {
   .fixed-shift-for-large {
     margin-left: 25%;
@@ -111,6 +115,13 @@ body {
 
 .site-content .row {
   max-width: 90rem;
+}
+
+/* adjust top margin for sticky header (not large size) */
+@media screen and (max-width:63.9375em) {
+  .site-content {
+    margin-top: 4rem;
+  }
 }
 
 .page-content {
@@ -447,6 +458,10 @@ table code {
 /* sticky header with overlay menu (for small/medium screens) */
 
 .sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
   width: 100%;
   height: 3rem;
   background: #128aaa;
@@ -464,32 +479,50 @@ table code {
   margin-right: 1rem;
 }
 
-#overlay-menu {
-  padding: 0;
-}
-
-.overlay-header {
+.overlay-nav {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: 0;
   width: 100%;
-  height: 3rem;
-  background: #128aaa;
-  color: #fff;
+  background: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: height 0.5s linear;
 }
 
-.overlay-header .logo {
-  height: 2rem;
-  margin-top: 0.5rem;
-  margin-left: 1rem;
+.overlay-nav.nav-open {
+  height: 100%;
 }
 
-.overlay-header .menu-close {
-  margin-top: 0.3rem;
-  margin-right: 1rem;
-  font-size: 2em;
-  line-height: 1;
+/* prevent scrolling of the body */
+body.nav-open {
+  overflow: hidden;
 }
 
-#overlay-menu .nav-toc {
-  padding: 1rem;
+.overlay-nav .nav-header {
+  display: none;
+  position: fixed;
+  z-index: 11;
+  top: 3rem;
+  left: 0;
+  width: 100%;
+  height: 7rem;
+  background-image: none;
+}
+
+.overlay-nav.nav-open .nav-header {
+  display: block;
+}
+
+.overlay-nav .nav-header .nav-header-title h1 {
+  margin-top: 0;
+  padding-top: 0.5rem;
+}
+
+.overlay-nav .nav-toc {
+  padding: 11rem 1rem 1rem 1rem;
 }
 
 /* navigation header */
@@ -530,6 +563,7 @@ table code {
 .nav-header .nav-header-groups select.supergroup {
   width: 80%;
   height: 2rem;
+  max-width: 20rem;
   font-size: 0.9em;
   padding-left: 1rem;
   border: none;
@@ -544,6 +578,7 @@ table code {
   display: inline-block;
   width: 80%;
   height: 2rem;
+  max-width: 20rem;
   font-size: 0.9em;
   padding: 1rem;
   border: none;

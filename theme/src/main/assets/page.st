@@ -13,29 +13,34 @@ $endif$
 <script type="text/javascript" src="$page.base$lib/foundation/dist/js/foundation.min.js"></script>
 <link rel="stylesheet" type="text/css" href="$page.base$lib/normalize.css/normalize.css"/>
 <link rel="stylesheet" type="text/css" href="$page.base$lib/foundation/dist/css/foundation.min.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
 <link rel="stylesheet" type="text/css" href="$page.base$css/icons.css"/>
 <link rel="stylesheet" type="text/css" href="$page.base$css/page.css"/>
 <link rel="shortcut icon" href="$page.base$images/favicon.ico" />
 $analytics()$
 </head>
 
-<body>
+<body id="underlay" data-toggler="nav-open">
 
-<aside id="overlay-menu" class="full reveal" data-reveal data-v-offset="0" data-animation-in="slide-in-down" data-animation-out="scale-out-down">
-<div class="overlay-header clearfix">
+<header class="site-header hide-for-large">
+<div class="sticky-header clearfix">
 $logo()$
-<button class="menu-close float-right" type="button" data-close><span>&times;</span></button>
+<button class="menu-icon float-right" type="button" data-toggle="underlay overlay"></button>
 </div>
+<div id="overlay" class="overlay-nav" data-toggler="nav-open">
+<header class="nav-header">
+<div class="nav-header-title">
+<h1><a href="$page.home.href$">$page.home.title$</a></h1>
+</div>
+<div class="nav-header-version">
+Version $page.properties.("project.version")$
+</div>
+<div class="nav-header-groups">
+$page.groups$
+</div>
+</header>
 <nav class="nav-toc">
 $page.navigation$
 </nav>
-</aside>
-
-<header class="site-header hide-for-large" data-sticky-container>
-<div class="sticky-header clearfix" data-sticky data-sticky-on="small" data-margin-top="0">
-$logo()$
-<button class="menu-icon float-right" type="button" data-open="overlay-menu"></button>
 </div>
 </header>
 
@@ -44,7 +49,7 @@ $logo()$
 <div class="nav-header-title">
 <h1><a href="$page.home.href$">$page.home.title$</a></h1>
 </div>
-<div class="nav-header-version row">
+<div class="nav-header-version">
 Version $page.properties.("project.version")$
 </div>
 <div class="nav-header-groups">
@@ -56,12 +61,12 @@ $if(page.properties.("algolia.docsearch.api_key"))$
 </div>
 $endif$
 </header>
-<nav id="nav-contents" class="site-nav fixed-sidebar-contents">
+<nav class="site-nav fixed-sidebar-contents">
 <div class="nav-toc">
 $page.navigation$
 </div>
 </nav>
-<footer id="nav-footer" class="nav-footer fixed-sidebar-footer">
+<footer class="nav-footer fixed-sidebar-footer">
 $logo()$
 </footer>
 </aside>

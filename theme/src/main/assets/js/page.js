@@ -1,7 +1,7 @@
 $(function() {
 
   // close the overlay navigation when header links are clicked
-  $("#overlay-menu .nav-toc a.header").attr("data-close", "");
+  $(".overlay-nav .nav-toc a.header, .overlay-nav .nav-toc a.active.page").attr("data-toggle", "underlay overlay");
 
   // modify the layout of section TOCs to be in a block grid with equal heights
   var toc = $(".page-content .toc");
