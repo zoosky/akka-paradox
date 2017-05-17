@@ -279,16 +279,16 @@ pre {
 }
 
 code {
-  line-height: 1.45em !important;
+  line-height: 1.1 !important;
   font-family: "SourceCodePro", Consolas, "Liberation Mono", Courier, monospace !important;
-  font-size: 1em !important;
+  font-size: 0.9375em !important;
   font-weight: normal !important;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   border: none;
   background: #fff;
   color: #0c323b;
-  padding: 0 0.2em !important;
+  padding: 0 0.2rem !important;
 }
 
 pre > code {
@@ -320,6 +320,7 @@ dl.tabbed dt {
   float: left;
   display: inline-block;
   position: relative;
+  margin-top: 0;
   margin-left: 10px;
   background: #e5e6e4;
 }
