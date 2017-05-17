@@ -283,30 +283,18 @@ code {
   font-family: "SourceCodePro", Consolas, "Liberation Mono", Courier, monospace !important;
   font-size: 1em !important;
   font-weight: normal !important;
-  padding: 0 !important;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  background: #fff;
+  color: #0c323b;
+  padding: 0 0.2em !important;
 }
 
 pre > code {
   background: none;
-  border: none;
-}
-
-p code {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  border: none;
-  background: #fff;
-  color: #0c323b;
-  padding: 0 0.2em !important;
-}
-
-li code {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  border: none;
-  background: #fff;
-  color: #0c323b;
-  padding: 0 0.2em !important;
+  border-radius: 0;
+  padding: 0 !important;
 }
 
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code, a code {
