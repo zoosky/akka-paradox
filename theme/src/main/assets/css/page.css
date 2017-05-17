@@ -659,17 +659,6 @@ body.nav-open {
   list-style-type: none;
 }
 
-.page-content .toc ul.toc-grid li ul {
-  margin: 0;
-  padding: 0;
-}
-
-.page-content .toc ul.toc-grid li ul li ul {
-  margin: 0.2rem 0 0.2rem 0.6rem;
-  border-left: 2px solid #e7e7e7;
-  padding-left: 0.6rem;
-}
-
 .page-content .toc .toc-box {
   background: #fff;
   height: 100%;
@@ -695,6 +684,21 @@ body.nav-open {
   transition: all 300ms ease-in-out;
 }
 
+.page-content .toc .toc-box li {
+  list-style-type: none;
+}
+
+.page-content .toc .toc-box ul {
+  margin: 0;
+  padding: 0;
+}
+
+.page-content .toc .toc-box ul li ul {
+  margin: 0.2rem 0 0.2rem 0.6rem;
+  border-left: 2px solid #e7e7e7;
+  padding-left: 0.6rem;
+}
+
 .page-content .toc .toc-box li a {
   display: block;
   color: #0b5567;
@@ -704,6 +708,10 @@ body.nav-open {
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
   transition: all 300ms ease-in-out;
+}
+
+.page-content .toc .toc-box li a.header {
+  font-weight: normal;
 }
 
 .page-content .toc .toc-box li a:hover {
