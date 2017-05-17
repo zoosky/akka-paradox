@@ -40,6 +40,11 @@ Version $page.properties.("project.version")$
 <div class="nav-header-groups">
 $page.groups$
 </div>
+$if(page.properties.("algolia.docsearch.api_key"))$
+<div id="overlay-search-container" class="nav-header-search">
+<input id="overlay-search" type="search" class="search" placeholder="Search"/>
+</div>
+$endif$
 </header>
 <nav class="nav-toc">
 $page.navigation$
