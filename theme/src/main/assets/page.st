@@ -13,6 +13,7 @@ $endif$
 <script type="text/javascript" src="$page.base$lib/foundation/dist/js/foundation.min.js"></script>
 <link rel="stylesheet" type="text/css" href="$page.base$lib/normalize.css/normalize.css"/>
 <link rel="stylesheet" type="text/css" href="$page.base$lib/foundation/dist/css/foundation.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
 <link rel="stylesheet" type="text/css" href="$page.base$css/icons.css"/>
 <link rel="stylesheet" type="text/css" href="$page.base$css/page.css"/>
 <link rel="shortcut icon" href="$page.base$images/favicon.ico" />

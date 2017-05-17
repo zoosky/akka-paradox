@@ -64,7 +64,7 @@ body {
   height: 160px;
   width: 25%;
   max-width: 20rem;
-  overflow: hidden;
+  z-index: 10;
   background: #15a9ce;
   color: #fff;
 }
@@ -567,14 +567,19 @@ body.nav-open {
   box-shadow: 0 0 6px #eee;
 }
 
+.nav-header .nav-header-search {
+  width: 80%;
+  max-width: 20rem;
+  margin: 0 auto;
+}
 
 .nav-header .nav-header-search .search {
   display: inline-block;
-  width: 80%;
+  width: 100%;
   height: 2rem;
-  max-width: 20rem;
   font-size: 0.9em;
-  padding: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 0;
   border: none;
   border-radius: 0;
   box-shadow: none;
