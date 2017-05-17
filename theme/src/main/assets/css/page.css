@@ -304,6 +304,12 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code, a code {
   padding: 0 !important;
 }
 
+/* definition lists */
+
+dl dt {
+  margin-top: 1.5rem;
+}
+
 /* tabbed code snippets */
 
 dl.tabbed {
