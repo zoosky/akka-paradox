@@ -16,6 +16,8 @@ $endif$
 <link rel="stylesheet" type="text/css" href="$page.base$css/icons.css"/>
 <link rel="stylesheet" type="text/css" href="$page.base$css/page.css"/>
 <link rel="shortcut icon" href="$page.base$images/favicon.ico" />
+<meta name="theme-color" content="#15a9ce">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 $analytics()$
 </head>
 
