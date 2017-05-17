@@ -361,6 +361,21 @@ dl.tabbed dd.current {
   z-index: 1;
 }
 
+/* blockquotes */
+
+blockquote {
+  color: #0b5567;
+  border-left: 10px solid #e5e6e4;
+}
+
+blockquote p {
+  color: #0b5567;
+}
+
+blockquote code {
+  color: #0b5567;
+}
+
 /* callouts */
 
 .callout {
