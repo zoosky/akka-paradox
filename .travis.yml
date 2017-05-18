@@ -18,3 +18,18 @@ cache:
   directories:
     - $HOME/.ivy2/cache
     - $HOME/.sbt/boot
+
+deploy:
+  provider: script
+  script:
+    - sbt -J-XX:ReservedCodeCacheSize=128m ++$TRAVIS_SCALA_VERSION publish
+  on:
+    tags: true
+    repo: akka/akka-paradox
+
+env:
+  global:
+    # encrypt with: travis encrypt BINTRAY_USER=...
+    - secure: "IQg5hi0e/KL6l84P4NdvuL5Hi006SyGXB3YLwkopfX7o0JA8VZtkbX/LWnCMjkM8fBCTOwEANFAfFIaCi7RH/OIio4/OfWgmvk2pTjpJGAAGaxqRux0EbcU0jm03NXrUBqGTLJEMHxx5LQDppJCk4gPIRQWORYDJQRZmhpOrqhRra3l5/P3rOJ/adLcSVhvIbaIK+AF6Q/CO9EddxH2Xw1WSyfyFp6kx/echdY2vpqFGkuP4JiA0uWqR0GFw5I3yyyaULIJOddmeI1xFlpHCNSoWiKtuPOE6yGMWXfVj02Ra+m9A9fYQs3VHoS6d62dlHXW62EPpqP8WFkXBT9w1iX/jLk+1OgHNnrsR5G/lAoxvKjowOfESg8oeQKDqpxDZhr69nkJG9gTzTUqLVBKTdvr68GhBa5Ttit4I6A5xWpkQCMb+cQi/wzHkKu2dk3Vd096tYeXy1beDn/OcecsG8jHPjq2jZnbX8KUKucnvtVH2lJLGbYwgLvr8He4HQm1vtl8v6AJ0sJ/WenW1UEgaPAm1odGsy9BEqSOaCnND72wD7wYBpZkLVgQvdjUEwe9wDvV6IDvx7FGYlLfaCX8G5AivoOhY8gRxMydRkmdN/yyemaXDFd+JWNE/IDvT17/683WFW84WBdpgdkVakPs+0fqxwDQsa7quKhe0byWQtD8="
+    # encrypt with: travis encrypt BINTRAY_PASS=...
+    - secure: "pKeUYhwEiDsMkQcEt1RAPkdH67xVRL9zlFJR7CaqrWYnZLL9l8sv+N8cV26Lw1i+NmR3N8oKEITTY2Gs4VLLYfPO47RkVEp1hs4bA0kTkm9akn02vyhvHysGv3ZpwG+NL8rCBB03oZUyCHa/dEKLIZLCPBs2GlIVifgUPRJ1S32mkesv6FSbaIRqqonCblqLEq0PkT+WcA0sZI2ZYdCDPPPmN1rhxo9yvQ/pcyC8RC+Lk2qtbZtj9ciqu4muEe9W5ckSScylb7GDBR/m37zRaaiR8xeLa96LzYmNi6/IHpokozzPP95G/pMSqBGnnQoDHBkJCjKHLCs1rS11oum9S9D8O6AeSJk0l261tZOKG9Mig/LuacWCWnGak9rP9BV7ZGqJzuMIrLw+pvkTTOIKpDlUs5hxSgr8EcX4cfMMuYB9BrLQsb8Q6HY0Uxd5diReIGa7XIvfcBKPoji+hIYgAyI2oa0p4cjPvPHaxtwLvrlmy7OD7twOwuhKyTl4rmIC2Rmt7Gg9F4wjJw5URGS90GlTPFo7KfOosw/RmYXh+8WBo9nOn0+e5BV+Km53DSronhUke0KXrtDEgK9SDRUhFeeKpLIDlyAtFZFRafcbXx/b1LYrr95drl53gkdvJacZ1cVrKZloNhsxKVSZreUBr4dijiXIhi4UIUsW24QW034="
