@@ -409,6 +409,11 @@ blockquote code {
   background: #f3f7f8;
 }
 
+.callout pre {
+  border: none !important;
+  background: #f3f7f8 !important;
+}
+
 /* sidenotes */
 
 .sidenote {
