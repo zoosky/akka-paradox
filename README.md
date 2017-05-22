@@ -10,6 +10,7 @@ This plugin extends the Paradox sbt plugin with some default settings and sets t
 
 ## Releasing
 
-When adding a tag, travis should automatically release to
-https://bintray.com/akka. From there the files must be published in 'maven' and
-'sbt-plugin-releases' to make them available on jcenter and sbt, respectively.
+- Tag the commit you want to release
+- Travis should automatically release to https://bintray.com/akka
+- Go to https://bintray.com/akka/sbt-plugin-releases/sbt-paradox-akka and 'publish' the released files (they should automatically become available at https://bintray.com/sbt/sbt-plugin-releases)
+- Go to https://bintray.com/akka/maven/paradox-theme-akka and 'publish' the released files (they should automatically become available through jcenter)
