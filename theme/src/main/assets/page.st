@@ -17,6 +17,12 @@ $endif$
 <link rel="stylesheet" type="text/css" href="$page.base$css/icons.css"/>
 <link rel="stylesheet" type="text/css" href="$page.base$css/page.css"/>
 <link rel="shortcut icon" href="$page.base$images/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="$page.base$images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="$page.base$images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="$page.base$images/favicon-16x16.png">
+<link rel="manifest" href="$page.base$images/manifest.json">
+<meta name="msapplication-TileImage" content="$page.base$images/mstile-150x150.png">
+<meta name="msapplication-TileColor" content="#15a9ce">
 <meta name="theme-color" content="#15a9ce">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 $analytics()$
