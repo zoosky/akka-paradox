@@ -8,8 +8,7 @@ object Publish extends AutoPlugin {
   override def requires = BintrayPlugin
 
   override def buildSettings = Seq(
-    BintrayKeys.bintrayOrganization := Some("akka"),
-    BintrayKeys.bintrayReleaseOnPublish := false
+    BintrayKeys.bintrayOrganization := Some("akka")
   )
 
   override def projectSettings = Seq(
