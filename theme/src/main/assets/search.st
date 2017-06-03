@@ -3,8 +3,6 @@ $if(page.properties.("algolia.docsearch.api_key"))$
 <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
 <style>.algolia-autocomplete { display: block !important }</style>
 <script type="text/javascript">
-  var version = "$page.properties.("project.version")$";
-
   var lang = "scala";
   var path = window.location.pathname;
   if (path.includes("/java/") || path.includes("java.html")) {
@@ -17,7 +15,7 @@ $if(page.properties.("algolia.docsearch.api_key"))$
     inputSelector: '#search',
     algoliaOptions: {
       hitsPerPage: 5,
-      facetFilters: ["version:" + version, "language:" + lang]
+      facetFilters: ["language:" + lang]
     }
   });
 
@@ -27,7 +25,7 @@ $if(page.properties.("algolia.docsearch.api_key"))$
     inputSelector: '#overlay-search',
     algoliaOptions: {
       hitsPerPage: 5,
-      facetFilters: ["version:" + version, "language:" + lang]
+      facetFilters: ["language:" + lang]
     }
   });
 
