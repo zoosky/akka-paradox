@@ -23,22 +23,4 @@ $(function() {
       toc.wrapInner("<div class='toc-box'></div>");
     }
   });
-
-  var currentLanguage;
-  if (document.location.href.indexOf('/scala/') != -1) {
-    currentLanguage = 'scala';
-  } else if (document.location.href.indexOf('/java/') != -1) {
-    currentLanguage = 'java';
-  }
-
-  // page refresh when switching between java and scala
-  window.groupChanged(function(group, supergroup, catalog) {
-    if (currentLanguage == 'java' && group == 'group-scala') {
-      document.location.href = document.location.href.replace('/java/', '/scala/');
-    }
-    if (currentLanguage == 'scala' && group == 'group-java') {
-      document.location.href = document.location.href.replace('/scala/', '/java/');
-    }
-  });
 });
-

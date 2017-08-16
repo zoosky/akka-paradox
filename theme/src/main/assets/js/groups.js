@@ -20,12 +20,6 @@ $(function() {
   if(cookieTg != "")
     currentGroups = JSON.parse(cookieTg);
 
-  if (document.location.href.indexOf('/scala/') != -1) {
-    currentGroups['languages'] = 'group-scala';
-  } else if (document.location.href.indexOf('/java/') != -1) {
-    currentGroups['languages'] = 'group-java';
-  }
-
   // http://www.w3schools.com/js/js_cookies.asp
   function setCookie(cname,cvalue,exdays) {
     if(!exdays) exdays = 365;
