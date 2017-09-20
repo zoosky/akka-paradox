@@ -1,13 +1,10 @@
 language: scala
 
-scala:
-  - "2.10.6"
-
 jdk:
   - oraclejdk8
 
 script:
-  - sbt -J-XX:ReservedCodeCacheSize=128m ++$TRAVIS_SCALA_VERSION ";test:compile"
+  - sbt -J-XX:ReservedCodeCacheSize=128m ";^test:compile"
   - git diff --exit-code --color || { echo "[error] Unformatted code found. Please run 'test:compile' and commit the reformatted code."; false; } && sbt -J-XX:ReservedCodeCacheSize=128m ++$TRAVIS_SCALA_VERSION ";test"
 
 before_cache:
@@ -22,7 +19,7 @@ cache:
 deploy:
   provider: script
   script:
-    - sbt -J-XX:ReservedCodeCacheSize=128m ++$TRAVIS_SCALA_VERSION publish
+    - sbt -J-XX:ReservedCodeCacheSize=128m ++$TRAVIS_SCALA_VERSION ^publish
   on:
     tags: true
     repo: akka/akka-paradox
