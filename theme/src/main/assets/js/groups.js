@@ -16,15 +16,8 @@ $(function() {
   var catalog = {}
   var supergroupByGroup = {};
 
-
   if(cookieTg != "")
     currentGroups = JSON.parse(cookieTg);
-
-  if (document.location.href.indexOf('/scala/') != -1) {
-    currentGroups['languages'] = 'group-scala';
-  } else if (document.location.href.indexOf('/java/') != -1) {
-    currentGroups['languages'] = 'group-java';
-  }
 
   // http://www.w3schools.com/js/js_cookies.asp
   function setCookie(cname,cvalue,exdays) {
@@ -76,15 +69,10 @@ $(function() {
     dts.last().addClass("last");
   });
 
+  // Determine all supergroups, populate 'catalog' and 'supergroupByGroup' accordingly.
   $(".supergroup").each(function() {
     var supergroup = $(this).attr('name').toLowerCase();
     var groups = $(this).find(".group");
-
-    var current = currentGroups[supergroup];
-    if (!current) {
-      current = "group-" + groups.first().text().toLowerCase();
-      currentGroups[supergroup] = current;
-    }
 
     catalog[supergroup] = [];
 
@@ -94,12 +82,17 @@ $(function() {
       supergroupByGroup[group] = supergroup;
     });
 
-    switchToGroup(supergroup, current);
-
     $(this).on("change", function() {
       switchToGroup(supergroup, this.value);
     });
   });
+
+  // Switch to the right initial groups
+  for (var supergroup in catalog) {
+    var current = queryParamGroup(supergroup) || currentGroups[supergroup] || catalog[supergroup][0];
+
+    switchToGroup(supergroup, current);
+  }
 
   $("dl.tabbed dt a").click(function(e){
     e.preventDefault();
@@ -115,6 +108,15 @@ $(function() {
       switchToTab(currentDt);
     }
   });
+
+  function queryParamGroup(supergroup) {
+    var value = new URLSearchParams(window.location.search).get(supergroup)
+    if (value) {
+      return "group-" + value.toLowerCase();
+    } else {
+      return "";
+    }
+  }
 
   function switchToGroup(supergroup, group) {
     currentGroups[supergroup] = group;
